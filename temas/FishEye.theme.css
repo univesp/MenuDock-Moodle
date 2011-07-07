@@ -1,0 +1,38 @@
+#menuFishEye{
+	width: 60%;
+	bottom: 0px;
+	position: relative;
+	left: 0px;
+	border-bottom: solid 6px #CCC;
+	height: 60px;
+	margin-left: 100px;
+}
+#menuFishEye div {
+	position: absolute;
+	height: 70px;
+	background: url(images/dock-bg.gif);
+	padding-left: 20px;
+}
+#menuFishEye div a{
+	display: block; 
+	font: bold 12px Arial, Helvetica, sans-serif;
+	width: 40px; 
+	color: #000; 
+	bottom: 0px; 
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	clear: both;
+	
+}
+.fisheye-menu-item-label {
+	display: none;
+	padding-left: 20px;
+}
+#menuFishEye div a img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+	margin-right: 20px;
+	border: none;
+}

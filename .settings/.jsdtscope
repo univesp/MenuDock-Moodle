@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="doc/css-dock-menu/js/|scripts/" kind="src" path=""/>
+	<classpathentry kind="src" path="doc/css-dock-menu/js"/>
+	<classpathentry kind="src" path="scripts"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
