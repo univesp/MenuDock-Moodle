@@ -20,7 +20,35 @@
 		<a href='#'><span class='fisheye-menu-item-label'>Livro texto</span><img src="imagens/livro-texto.png" alt="" /></a>
 		<a href='#'><span class='fisheye-menu-item-label'>Áudio book</span><img src="imagens/audio-book.png" alt="" /></a>
 		<a href='#'><span class='fisheye-menu-item-label'>eBook</span><img src="imagens/ebook.png" alt="" /></a>
-		<a href='#'><span class='fisheye-menu-item-label'>Navegando por aí</span><img src="imagens/navegando-por-ai.png" alt="" /></a>
+		<a href='#' id='nav'><span class='fisheye-menu-item-label'>Navegando por aí</span><img src="imagens/navegando-por-ai.png" alt="" /></a>
 		<a href='#'><span class='fisheye-menu-item-label'>Recursos multimídia</span><img src="imagens/recursos-multimidia.png" alt="" /></a> 
 	</div>
+	
+	<div id='containerWindow'>
+	
+	</div>
+	
 </div>
+<script type="text/javascript">
+	var dialog_config = {
+		width: 670,
+		closeText: 'fechar',
+		title: 'navegando por ai',
+		position: 'top',
+		show: 'blind',
+	};
+	$(document).ready(function(){
+		$("a#nav").click(function(){
+			$("#containerWindow").load('popup.html');
+			$.get(
+				"popup.html", 
+				function(data){
+					//window.alert(data);
+					$("#containerWindow").html(data);
+					$("#containerWindow").dialog(dialog_config);
+				}, 
+				"text"
+			);
+		});
+	});
+</script>

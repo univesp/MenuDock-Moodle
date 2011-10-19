@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<style>
+			body{
+				font-family: arial, helvetica;
+				font-size: 10pt;
+			}
+			body div#janela div#navegando_por_ai dl dt{
+				font-weight: bold;
+			}
+			body div#janela div#navegando_por_ai dl dt a{
+				text-decoration: none;
+			}
+		</style>
+		<link rel='stylesheet' href='temas/jquery-ui-start.css' />
+	</head>
+
+	<body>
+		<a href='#' id='nav'>Navegando por ai</a>
+		<div id='janela' style='display:none;' class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable">
+			<img id='banner' src='imagens/glossario.png' />
+			<div class='' id='navegando_por_ai'>
+				<dl>
+					<dt>Lorem Ipsum</di>
+					<dd><a href='www.lipsum.com' target='_blank'>www.lipsum.com</a></dd>
+				
+					<dt>Google</di>
+					<dd><a href='www.google.com' target='_blank'>www.google.com</a></dd>
+				
+					<dt>Wikipédia em Português</di>
+					<dd><a href='pt.wikipedia.org' target='_blank'>pt.wikipeadi.org/</a></dd>
+				</dl>
+			</div>
+		
+			<div id='glossario'>
+				<img id='banner' src='imagens/glossario.png' />
+				<ul>
+					<li><strong>Termo 1:</strong> Descrição</li>
+					<li><strong>Termo 2:</strong> Descrição</li>
+					<li><strong>Termo 3:</strong> Descrição</li>
+					<li><strong>Termo 4:</strong> Descrição</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="https://www.google.com/jsapi?key="></script>
+	<script type="text/javascript">
+		google.load("jquery", "1.6");
+		google.load("jqueryui", "1.8.16");
+	</script>
+	<script  type="text/javascript">
+		var dialog_config = {
+			width: 670,
+			closeText: 'fechar',
+			title: 'navegando por ai',
+			position: 'top',
+			show: 'blind',
+		};
+		$(document).ready(function(){
+			$("a#nav").click(function(){
+				$("#janela").dialog(dialog_config);
+			});
+		});
+	</script>
+</html>
