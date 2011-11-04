@@ -12,18 +12,26 @@ var $FishEye = {
 		halign : 'center'
 	}
 };
-/*
-var $DATA = {
-	items : [
-		{label:"Apresentação da Unidade", icon: "apresentacao.png"},
-		{label:"Livro texto", icon: "livro-texto.png"},
-		{label:"Áudio book", icon: "audio-book.png"},
-		{label:"Navegando por aí", icon: "navegando-por-ai.png"},
-		{label:"Recurso multimídia", icon: "recursos-multimidia.png"},
-	]
+var dialog_config = {
+	width: 670,
+	closeText: 'fechar',
+	title: 'navegando por aí',
+	position: 'top',
+	show: 'blind',
 };
-*/
 $(document).ready(function(){
 	//LoadItemsIn($("div.fisheye-container"));
 	$('.fisheye-menu').Fisheye($FishEye.config);
+	$("a#nav").click(function(){
+		$("#containerWindow").load('popup.html');
+		$.get(
+			"popup.html", 
+			function(data){
+				//window.alert(data);
+				$("#containerWindow").html(data);
+				$("#containerWindow").dialog(dialog_config);
+			}, 
+			"text"
+		);
+	});
 });

@@ -1,4 +1,5 @@
-#menuFishEye{
+#menuFishEye, 
+.fisheye-menu{
 	width: 60%;
 	bottom: 0px;
 	position: relative;
@@ -6,14 +7,19 @@
 	border-bottom: solid 6px #CCC;
 	height: 60px;
 	margin-left: 100px;
+	
 }
-#menuFishEye div {
+#menuFishEye div,
+.fisheye-menu div{
 	position: absolute;
 	height: 70px;
 	background: url(images/dock-bg.gif);
 	padding-left: 20px;
+	
+	
 }
-#menuFishEye div a{
+#menuFishEye div a,
+.fisheye-menu div a{
 	display: block; 
 	font: bold 12px Arial, Helvetica, sans-serif;
 	width: 40px; 
@@ -29,7 +35,8 @@
 	display: none;
 	padding-left: 20px;
 }
-#menuFishEye div a img {
+#menuFishEye div a img,
+.fisheye-menu div a img{
 	border: none; 
 	margin: 5px 10px 0px; 
 	width: 100%; 
